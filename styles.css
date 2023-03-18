@@ -1,0 +1,1052 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/** Webpage styling */
+:root {
+  --mainWhite: rgb(233, 233, 233);
+  --mainBlack: rgb(6, 6, 6);
+  --limeGreend: rgb(161, 251, 161);
+  --cream: rgb(247, 243, 234);
+  --darkCream: rgb(252, 248, 209);
+  --yellow: rgb(245, 245, 168);
+}
+
+html {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  transition: all 1s ease;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--mainBlack);
+  width: 100vw;
+  max-width: 100vw;
+}
+
+main {
+  width: 100vw;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 30px;
+  border: 1px solid var(--mainBlack);
+  background-color: transparent;
+  font: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button,
+button:hover {
+  cursor: pointer;
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+.navigationHeader {
+  width: 100%;
+  /*height: 7.5vh;*/
+  min-height: 50px;
+  position: fixed;
+  z-index: 5;
+  padding: 0px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--cream);
+  border-bottom: 1.5px solid var(--mainBlack);
+  display: flex;
+  align-items: center;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.topBar button {
+  padding: 5px 20px;
+  font-size: 1rem;
+}
+
+.mainNavList {
+  list-style-type: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 0% 5px;
+}
+
+.navItem {
+  display: inline-block;
+  margin: 0px 2.5px;
+  padding: 5px 15px;
+  transition: 0.5s all ease;
+}
+
+.navLink,
+nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.navItem:hover {
+  background-color: var(--limeGreend);
+  border: 1px solid var(--mainBlack);
+  /*color: var(--mainWhite);*/
+}
+
+.navLink:visited {
+  color: inherit;
+}
+
+.nonMobile {
+  display: none;
+}
+
+.mobileNav {
+  display: inline-block;
+  margin: 0px;
+}
+
+.homeLogo {
+  display: none;
+  font-size: 2rem;
+}
+
+.quickActions {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0% 5px;
+  margin: 0px;
+}
+
+.actionItem {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.bookBtn {
+  background-color: var(--limeGreend);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.languageBtn {
+  background-color: transparent;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.mobileNav {
+  max-width: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  min-width: 55px;
+  padding: 0px;
+  border: none;
+  width: 100%;
+}
+
+.dropbtn {
+  background-color: transparent;
+}
+
+.dropdown-content {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(0deg);
+  display: block;
+  position: absolute;
+  background-color: var(--mainWhite);
+  color: var(--mainBlack);
+  min-width: 275px;
+  width: 50vw;
+  height: 110vh;
+  left: 0;
+  top: -25px;
+  z-index: 2;
+}
+
+.dropdown-content .close {
+  display: flex;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dropdown-content .close .closeBtn {
+  background-color: transparent;
+  padding: 5%;
+  margin-top: 5%;
+  font-size: 2rem;
+  border-radius: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content .close .closeBtn:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.dropdown-content ul {
+  padding: 25% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0%;
+  height: 75%;
+}
+
+.dropdown-content ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  text-align: center;
+  color: inherit;
+  border: 1px solid var(--mainBlack);
+  background-color: transparent;
+  margin: 5px 0px;
+}
+
+.dropdown-content ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  text-decoration: none;
+  margin: 0%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.dropdown-content ul li:nth-child(1) {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.dropdown-content ul li:nth-child(1):hover,
+.dropdown-content ul li:nth-child(1) a:hover,
+.dropdown-content ul li:nth-child(1) a:visited,
+.dropdown-content ul li:nth-child(1) a:active,
+.dropdown-content ul li:nth-child(1) a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#closeLi {
+  margin-top: 35px;
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+
+.dropdown-content ul li a:hover,
+.dropdown-content ul li a:active,
+.dropdown-content ul li a:focus {
+  text-decoration: underline;
+}
+
+.dropdown-content ul li:hover,
+.dropdown-content ul li:active,
+.dropdown-content ul li:focus {
+  background-color: var(--limeGreend);
+}
+
+.dropdown-content ul li a:visited {
+  color: unset;
+  text-decoration: none;
+}
+
+.dropdown-content .trilogyMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.hide {
+  display: none;
+}
+
+/*end nav --- into main site */
+
+section {
+  width: 100%;
+  padding: 15% 10%;
+}
+
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  padding: 0%;
+  background-color: var(--mainBlack);
+  background-image: url("images/avocado-chip-dish.jpeg");
+  background-position-x: center;
+  background-position-y: 75%;
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+}
+
+.heroSection .titleBox {
+  position: absolute;
+  z-index: 2;
+  color: var(--mainWhite);
+  top: 30%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainTitle {
+  font-family: "Diplomata SC", cursive;
+  font-size: 3rem;
+  margin: 10px 0px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.menuBtn {
+  padding: 5px 25px;
+  background-color: var(--limeGreend);
+  color: var(--mainBlack);
+  border: 1px solid var(--mainBlack);
+  border-radius: 0%;
+  box-shadow: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.menuBtn:hover {
+  background-color: var(--mainWhite);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(5, 5, 5, 0.4);
+}
+
+/* end hero section -- into about section */
+
+.aboutSection {
+  max-width: 100vw;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleDiv {
+  border-radius: 10%;
+  width: 65%;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.interiorShot {
+  display: inline-block;
+  max-width: none;
+  width: 100%;
+}
+
+/* menuJumpSection */
+
+.menuJumpSection {
+  background-color: var(--cream);
+  background-image: url("images/al-pastor.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--mainWhite);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0%;
+}
+
+.menuJumpSection .sectionText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5% 10%;
+  z-index: 2;
+}
+
+.menuJumpSection .sectionTitle {
+  color: var(--yellow);
+}
+
+.menuJumpSection p {
+  text-align: center;
+}
+
+.menuJumpSection .menuBtn {
+  margin: 25px 0px;
+  background-color: transparent;
+  border: 1px solid var(--limeGreend);
+  color: var(--mainWhite);
+  padding: 10px 20px;
+  transition: all 0.5s ease;
+}
+
+.menuJumpSection .menuBtn:hover {
+  color: var(--mainBlack);
+  border: none;
+  background-color: var(--limeGreend);
+}
+
+/*reviews*/
+
+.reviewsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviewsSection .sectionText {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviewsSection .sectionPara {
+  text-align: center;
+}
+
+.reviewBox {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 5%;
+  background-color: var(--mainWhite);
+  border: 1px solid var(--mainBlack);
+  margin: 5% 0%;
+  height: 100%;
+}
+
+.rating {
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+  font-size: 1.25rem;
+  border-radius: 15px;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.reviewText {
+  margin-bottom: 1.25%;
+}
+
+.author {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1%;
+}
+
+/* menu section */
+
+.menuSection {
+  background-color: var(--darkCream);
+}
+
+.menuSection .sectionText {
+  text-align: center;
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sectionText ul {
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.fullMenu {
+  margin: 50px 0px;
+}
+
+.menuHeading {
+  font-family: "Diplomata SC", cursive;
+  font-size: 1.5rem;
+  margin: 15px 0px;
+}
+
+.fullMenu ul {
+  padding-left: 25px;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.fullMenu ul li {
+  margin: 25px 0px;
+}
+
+.menuItem {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemBox {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  margin-right: 2.5%;
+  min-width: 200px;
+}
+
+.item {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.itemDescription {
+  margin: 5px 0px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainBlack);
+  margin-right: 40px;
+  /*max-width: 350px;*/
+}
+
+.nuevoTag {
+  padding: 2.5px;
+  border: 1px solid var(--mainBlack);
+  background-color: var(--yellow);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* To-dos juntos*/
+
+.groupSection {
+  background-color: rgb(219, 244, 219);
+}
+
+.groupSection .sectionText {
+  margin: 50px 0px;
+  text-align: center;
+  align-items: center;
+}
+
+.groupSection .sectionPara {
+  text-align: center;
+}
+
+.blockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.blockContainer .block {
+  width: 100%;
+  border: 1px solid var(--mainBlack);
+  padding: 20px;
+  grid-template-columns: repeat(2, minmax(100px, 250px));
+  grid-gap: 10px;
+  margin: 15px 0px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.block:nth-child(2) {
+  grid-template-columns: auto;
+}
+
+.blockTitle {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.block .bookBtn {
+  background-color: transparent;
+}
+
+.block button:hover {
+  background-color: var(--limeGreend);
+  transition: all 1s ease;
+}
+/* questions section */
+
+/*
+.faqSection {
+  background-color: var(--mainWhite);
+}*/
+
+.faqSection .sectionText,
+.stillQuestions,
+.faqSection .sectionText .sectionPara,
+.stillQuestions .sectionPara {
+  text-align: center;
+  /*margin: 50px 0px;*/
+  align-items: center;
+}
+
+.faqSection {
+  margin: 50px 0px;
+}
+
+.stillQuestions {
+  margin: 50px 0px;
+}
+
+.stillQuestions button:hover {
+  background-color: var(--limeGreend);
+  transition: all 1s ease;
+}
+
+/**/
+
+.contactForm {
+  margin: 50px 0px;
+}
+
+.contactForm .sectionText,
+.contactForm .sectionPara {
+  align-items: center;
+  text-align: center;
+}
+
+.formIconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formSplit {
+  margin: 25px 0px;
+  flex-direction: column;
+}
+
+.formList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  columns: 2;
+  grid-gap: 10px;
+  font-weight: normal;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.formItem label {
+  margin: 2.5px 0px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.formItem input {
+  border-radius: 0%;
+  border: 1px solid var(--mainBlack);
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 0.65rem;
+  font-weight: 300;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus,
+select:focus,
+select:active {
+  background-color: var(--limeGreend);
+}
+
+.formList .boxes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 50px;
+}
+
+.boxes {
+  margin-right: 15px;
+}
+
+.formItem select {
+  padding: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.formItem textarea {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#newsletterBox {
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+#newsletter {
+  margin-right: 20px;
+  width: 35px;
+}
+
+.formItem .submit {
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+/**/
+
+.iconSplit {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, auto));
+  grid-row-gap: 35px;
+  grid-column-gap: 15px;
+  align-items: flex-start;
+}
+
+.iconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px 0px;
+  /*justify-content: stretch;*/
+  font-size: 0.75rem;
+}
+
+.iconTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.iconBox p {
+  margin: 5px 0px;
+}
+
+.iconBox a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  font-weight: bold;
+}
+
+/**/
+
+footer {
+  margin: 2.5% 0px;
+  padding: 5%;
+}
+
+.topFooter {
+  padding: 0%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--mainBlack);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topFooter .homeLogo {
+  display: block;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.homeLink:hover {
+  text-decoration: none;
+}
+
+.footerNavList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .navItem {
+  display: block;
+  margin: 2.5px;
+}
+
+.bottomFooter {
+  padding: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.websiteAuthor {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+/**/
+
+.sectionText {
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-family: "Diplomata SC", cursive;
+  margin: 25px 0px;
+}
+
+.sectionSubtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+  margin: 20px 0px;
+}
+
+/* media queries */
+
+/*small devices and up*/
+@media only screen and (min-width: 600px) {
+  /**/
+
+  section {
+    padding: 5% 10%;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .nonMobile {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section {
+    padding: 5%;
+    min-height: 95vh;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.25rem;
+  }
+
+  /**/
+  .aboutSection {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .aboutImageBox {
+    margin-right: 10%;
+    width: 100%;
+  }
+
+  /**/
+
+  .reviewsSection {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-auto-flow: row dense;
+    grid-gap: 25px;
+  }
+
+  .reviewsSection .sectionText {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /**/
+
+  .blockContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5% 0%;
+    column-gap: 5%;
+  }
+
+  .blockContainer .block {
+    column-gap: 5%;
+    height: 100%;
+  }
+
+  /**/
+
+  .formIconBox {
+    flex-direction: row;
+    column-gap: 5%;
+    justify-content: space-evenly;
+  }
+  /**/
+
+  .topFooter {
+    flex-direction: row;
+    column-gap: 2.5%;
+    justify-content: center;
+  }
+
+  .footerNavList {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  /**/
+}

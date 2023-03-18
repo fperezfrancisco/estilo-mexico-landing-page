@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Estilo Mexico Mexican Restraunt Landing Page</title>
+  </head>
+  <body>
+    <header class="navigationHeader">
+      <nav class="topBar">
+        <ul class="mainNavList flex nonMobile">
+          <li class="navItem"><a href="#about" class="navLink">About</a></li>
+          <li class="navItem"><a href="#menu" class="navLink">Menu</a></li>
+          <li class="navItem"><a href="#groups" class="navLink">Groups</a></li>
+          <li class="navItem"><a href="#contact" class="navLink">Contact</a></li>
+        </ul>
+        <div class="dropdown mobileNav flex">
+          <button class="dropbtn" id="menuBtn">
+            <img
+              src="images/menu-closed-icon.png"
+              alt="menu"
+              class="menu-closed"
+            />
+          </button>
+          <div class="dropdown-content hide" id="dropDown-content">
+            <!--
+            <div class="close">
+              <button class="closeBtn">
+                <img
+                  src="images/menu-icon-open.png"
+                  alt="x"
+                  class="menu-opened"
+                />
+              </button>
+            </div>
+            -->
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="#" class="menu-link">Estilo Mexico</a>
+              </li>
+              <li class="menu-item">
+                <a href="#about" class="menu-link">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="#menu" class="menu-link">Menu</a>
+              </li>
+              <li class="menu-item">
+                <a href="#groups" class="menu-link">Groups</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="#contact"
+                  class="menu-link"
+                  >Contact</a
+                >
+              </li>
+              <li class="menu-item" id="closeLi">
+                <a href="#" class="menu-link" id="closeMenu">Close</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="homeLogo">
+          <a href="#" class="homeLink">Estilo Mexico</a>
+        </span>
+        <ul class="quickActions">
+          <li class="actionItem"><a href="#" class="whatsApp">call</a></li>
+          <li class="actionItem">
+            <a href="#" class="bookingLink"
+              ><button class="bookBtn">Booking</button></a
+            >
+          </li>
+          <!--
+          <li class="actionItem">
+            <a href="#"><button class="languageBtn">Lang</button></a>
+          </li>-->
+        </ul>
+      </nav>
+    </header>
+    <main class="mainSite">
+      <section class="heroSection" id="home">
+        <div class="titleBox flex">
+          <h1 class="mainTitle">Estilo Mexico</h1>
+          <h2 class="subtitle">Fine Mexican Cuisine</h2>
+          <button class="menuBtn"><a href="#menu">Menu</a></button>
+        </div>
+        <div class="overlay"></div>
+      </section>
+      <section class="aboutSection" id="about">
+        <div class="aboutImageBox circleDiv">
+          <img
+            src="images/restraunt-shot.jpeg"
+            alt="Estilo Mexico Restraunt"
+            class="interiorShot"
+          />
+        </div>
+        <div class="sectionText">
+          <h2 class="sectionTitle">Estilo Mexico?</h2>
+          <p class="aboutPara">
+            <strong
+              >Que significa esto? We take pride in our strong Mexican-American
+              heritage and we demonstrate that with our cuisine. All of our
+              dishes are inspired by the authentic Mexican home-style dining
+              that we had in our childhood and now we share with all of
+              you.</strong
+            >
+          </p>
+          <p class="aboutPara">
+            You can visit us for your little taste of <em>Mexico</em> featuring
+            our famous tacos, nachos, and signature cocktails. We are located in
+            the heart of Valencia, CA, in which we have inducted happiness into
+            the hearts of many customers. Our team of chef's, servers, and
+            managers continue to work hard to ensure we continue to represent
+            our Mexican heritage and bring the authentic
+            <em>Estilo Mexicano</em> to all.
+          </p>
+        </div>
+      </section>
+      <section class="menuJumpSection">
+        <div class="sectionText">
+          <h3 class="sectionSubtitle">Menu</h3>
+          <h2 class="sectionTitle">Una Probadita?</h2>
+          <p class="sectionPara">
+            Would you like to preview our menu? Click on the button below.
+          </p>
+          <button class="menuBtn">View Menu</button>
+          <a href="#" class="contactLink"
+            >Do you have a question about the menu?</a
+          >
+        </div>
+        <div class="overlay"></div>
+      </section>
+      <section class="reviewsSection">
+        <div class="sectionText">
+          <h3 class="sectionSubtitle">Reviews</h3>
+          <h2 class="sectionTitle">Buenas Palabras</h2>
+          <p class="sectionPara">
+            We do everything we can to provide the best experience and we are
+            more than happy to share your good ones. :)
+          </p>
+        </div>
+        <div class="reviewBox flex">
+          <div class="rating">10</div>
+          <div class="reviewText">
+            Super spontaneous reception by the staff, it really gave a warm and
+            welcome feeling. Good service and delicious dishes, we could hardly
+            choose. In short, we will definitely come back here more often!
+          </div>
+          <div class="author">Ralf</div>
+          <div class="reviewSite">Formitable</div>
+        </div>
+        <div class="reviewBox flex">
+          <div class="rating">5-stars</div>
+          <div class="reviewText">
+            With 6 persons Saturday evening we had a delicious dinner!
+            Everything freshly prepared, delicious, very nice service and value
+            for money, surprising dishes. We will definitely be back!
+          </div>
+          <div class="author">Henriw</div>
+          <div class="reviewSite">OpenTable</div>
+        </div>
+        <div class="reviewBox flex">
+          <div class="rating">5-stars</div>
+          <div class="reviewText">
+            Really FANTASTIC!!! If I could give 10 stars, I would. Nice, cosy
+            place. Very friendly staff (English speaking, was no problem for
+            us). The food was really phenomenal, especially the tacos al pastor.
+            To be repeated!
+          </div>
+          <div class="author">Warsha J.</div>
+          <div class="reviewSite">Google</div>
+        </div>
+      </section>
+      <section class="menuSection" id="menu">
+        <div class="sectionText">
+          <h3 class="sectionSubtitle">Menu</h3>
+          <h2 class="sectionTitle">Platos Deliciosos</h2>
+          <ul class="menuPreList">
+            <li class="prelistItem">Handmade Tortillas</li>
+            <li class="prelistItem">House Salsa</li>
+            <li class="prelistItem">Signature Cocktails</li>
+            <li class="prelistItem">Quality Meats</li>
+          </ul>
+        </div>
+        <div class="fullMenu">
+          <h2 class="menuHeading">Apperitivos</h2>
+          <ul class="appList">
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"
+                  ><h3 class="item">Bottomless Chips & Salsa</h3>
+                  <p class="itemDescription">
+                    House chips and salsa prepared daily.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">5.5</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex">
+                  <h4 class="nuevoTag">Nuevo</h4>
+                  <h3 class="item">Queso Fundido</h3>
+                  <p class="itemDescription">
+                    Oaxacan cheese infused with our pork Chorizo served
+                    alongside our famous handmade toritllas.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">11</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"
+                  ><h3 class="item">Chicken Nachos</h3>
+                  <p class="itemDescription">
+                    Our large family-style platter of nachos with sour cream,
+                    pico de gallo, and grilled chicken. Perfect for 2-4 guests.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">12.5</span>
+              </div>
+            </li>
+          </ul>
+          <h2 class="menuHeading">Bebidas</h2>
+          <ul class="drinkList">
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"><h3 class="item">Mojito</h3> </span>
+                <span class="line"></span>
+                <span class="price">8.5</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex">
+                  <h3 class="item">House Margarita</h3>
+                </span>
+                <span class="line"></span>
+                <span class="price">10</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"><h3 class="item">Paloma</h3> </span>
+                <span class="line"></span>
+                <span class="price">9.5</span>
+              </div>
+            </li>
+          </ul>
+          <h2 class="menuHeading">Platos</h2>
+          <ul class="plateList">
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"
+                  ><h3 class="item">Tacos al Pastor</h3>
+                  <p class="itemDescription">
+                    Three street-style tacos with Pork marinated in the
+                    traditional "al pastor" marindade. Served with rice and
+                    beans.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">12</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex">
+                  <h4 class="nuevoTag">Nuevo</h4>
+                  <h3 class="item">Mixed Fajitas</h3>
+                  <p class="itemDescription">
+                    Your choice of Steak, Chicken, or Shrimp tossed with onions
+                    and bellpeppers and served with rice and beans.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">15</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex menuItem">
+                <span class="itemBox flex"
+                  ><h3 class="item">Burrito Mojado</h3>
+                  <p class="itemDescription">
+                    Our world famous burrito with your choice of steak, chicken,
+                    or pork with pico de gallo, rice, beans, and guacamole.
+                  </p></span
+                >
+                <span class="line"></span>
+                <span class="price">12.5</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="groupSection" id="groups">
+        <div class="sectionText">
+          <h3 class="sectionSubtitle">Groups</h3>
+          <h2 class="sectionTitle">Todos Juntos</h2>
+          <p class="sectionPara">
+            We are happy to look into the possibility of receiving you as a
+            group. However, our restraunt is smaller than you might expect.
+            <br />We can seat up to 40 people.
+          </p>
+        </div>
+        <div class="blockContainer">
+          <div class="block grid">
+            <div class="fivePersons">
+              <h2 class="blockTitle">T/M 5 People</h2>
+              <p class="blockPara">
+                <strong
+                  >You can place this reservation yourself online using the button
+                  below.</strong
+                >
+              </p>
+              <p class="blockPara">
+                Please note! We only have 1 group table for a maximum of 5 people
+                available. If this table is still available our reservation system
+                will automatically indicate this and accept your reservation.
+              </p>
+              <button class="bookBtn">Book Online</button>
+            </div>
+            <div class="sixPersons">
+              <h2 class="blockTitle">From 6 persons</h2>
+              <p class="blockPara">
+                <strong
+                  >For a reservation from 6 to a maximum of 12 people, please call
+                  us or send a Whatsapp. <br />
+                  661.252.3977
+                </strong>
+              </p>
+              <p class="blockPara">
+                It is not possible to make one long table. However, the group will
+                be divided into serveral table groups.
+              </p>
+            </div>
+          </div>
+          <div class="block grid">
+            <div class="fifteenPersons">
+              <h2 class="blockTitle">From 15 Persons</h2>
+              <p class="blockPara">
+                <strong
+                >For a reservation of 15 people or more, please refer to our
+                contact form.</strong
+              >
+              <p class="blockPara">Choose the option "Group reservation", we will contact you a.s.a.p. to further discuss your wishes. However, we do not reserve groups of this size on Fridays and Saturdays.</p>
+              </p>
+              <button class="contactBtn"><a href="#contact">Contact</a></button>  
+            </div>
+            
+          </div> 
+        </div>
+        
+      </section>
+      <section class="faqSection">
+        <div class="sectionText">
+            <h3 class="sectionSubtitle">Frequently Asked Questions</h3>
+            <h2 class="sectionTitle">Just a Question</h2>
+            <p class="sectionPara">We've tried to answer some of your questions.</p>
+        </div>
+        <div class="questionsBlock">
+
+        </div>
+        <div class="stillQuestions">
+            <h2 class="sectionTitle">Still a question?</h2>
+            <p class="sectionPara">Then fill out our contact form or send a Whatsapp (click on link below), and we'll be in touch soon.</p>
+            <button class="contactBtn">Contact</button>
+        </div>
+      </section>
+      <section class="contactForm" id="contact">
+        <div class="sectionText">
+          <h3 class="sectionSubtitle">Contact</h3>
+          <h2 class="sectionTitle">Que Pasa?</h2>
+          <p class="sectionPara">Let us know what's on your mind, we'll get back to you soon. All fields are mandatory.</p>
+          <div class="formIconBox">
+          <div class="flex formSplit">
+            <form action="" method="post">
+              <ul class="formList grid">
+                <li class="formItem" id="names">
+                  <div class="boxes">
+                    <label for="fname">First Name: </label>
+                    <input type="text" id="fname" name="fname">
+                  </div>
+                  <div class="boxes">
+                    <label for="lname">Last name: </label>
+                    <input type="text" id="lname" name="lname"> 
+                  </div>          
+                </li>
+                
+                <li class="formItem" id="email-phone">
+                  <div class="boxes">
+                    <label for="email">Email Address: </label>
+                    <input type="email" id="email" name="email">
+                  </div>
+                  <div class="boxes">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" id="phone" name="phone">
+                  </div>
+                </li>
+                <li class="formItem" id="kindItem">
+                  <div class="boxes">
+                    <label for="typeQuestion">What kind of question?</label>
+                    <select id="typeQ" name="typeQuestion">
+                      <option value="general">General Question</option>
+                      <option value="menu">Question About the Menu</option>
+                      <option value="group">Group Reservation</option>
+                      <option value="allergen">Allergen Question</option>
+                      <option value="working">Working at Estilo Mexico</option>
+                    </select>   
+                  </div>         
+                </li>
+                <li class="formItem" id="messageItem">
+                  <div class="boxes">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here."></textarea>
+                    
+                  </div>
+                  
+                </li>
+                <li class="formItem" id="newsletterItem">
+                  <div class="boxes" id="newsletterBox">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+                    <label for="newsletter">I want to subscribe for the Estilo Mexico newsletter</label>
+                  </div>
+                  
+                </li>
+                <li class="formItem">
+                  <button class="submit">Submit</button>
+                </li>
+              </ul>
+              
+
+            </form>
+          </div>
+          <div class="flex iconSplit">
+            <div class="iconBox">
+              <h3 class="sectionSubtitle iconTitle">
+                WhatsApp
+              </h3>
+              <p>Available 24/7</p>
+              <a href="#">Send us a message</a>
+            </div>
+            <div class="iconBox">
+              <h3 class="sectionSubtitle iconTitle">
+                Telephone
+              </h3>
+              <p>Accessible Wed-Sun from 15:00</p>
+              <a href="#">661.252.3977</a>
+            </div>
+            <div class="iconBox">
+              <h3 class="sectionSubtitle iconTitle">
+                Address 
+              </h3>
+              <p>2635 Newhall Ave.<br>Newhall, CA, 91351</p>
+              
+            </div>
+            <div class="iconBox">
+              <h3 class="sectionSubtitle iconTitle">
+                Parking
+              </h3>
+              <p>Parking lot is located behind us on Lyons Ave.</p>
+            </div>
+            <div class="iconBox">
+              <h3 class="sectionSubtitle iconTitle">
+                Opening Hours
+              </h3>
+              <p>Wednesday through Sunday <br><strong>5p.m.-10p.m.</strong></p>
+              
+            </div>
+          </div>  
+          </div>
+          
+        </div>
+        
+      </section>
+    </main>
+    <footer>
+      <div class="topFooter">
+        <span class="homeLogo"><a href="#home" class="homeLink">Estilo Mexico</a></span>
+        <span class="footerNav">
+          <ul class="footerNavList">
+            <li class="navItem"><a href="#home" class="navItemLink">Back to top</a></li>
+            <li class="navItem"><a href="#about" class="navItemLink">About</a></li>
+            <li class="navItem"><a href="#menu" class="navItemLink">Menu</a></li>
+            <li class="navItem"><a href="#groups" class="navItemLink">Groups</a></li>
+            <li class="navItem"><a href="#" class="navItemLink">Working at Estilo Mexico</a></li>
+            <li class="navItem"><a href="#contact" class="navItemLink">Contact</a></li>
+          </ul>
+        </span>
+      </div>
+      <div class="bottomFooter">
+        <div class="websiteAuthor">Website by Francisco J. Perez</div>
+      </div>
+    </footer>
+  </body>
+</html>
